@@ -10,4 +10,4 @@ RUN echo "pkg ALL=NOPASSWD: ALL" >> /etc/sudoers
 USER pkg
 WORKDIR /home/pkg
 
-ENTRYPOINT makepkg -si --noconfirm
+ENTRYPOINT makepkg -si --noconfirm && /home/pkg/tests
